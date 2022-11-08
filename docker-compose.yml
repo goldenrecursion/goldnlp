@@ -25,7 +25,11 @@ services:
   named-entity-recognition:
     image: goldnlp
     working_dir: /opt/goldnlp/services/named-entity-recognition
-    command: uvicorn api:app --host 0.0.0.0 --port 5000
+    command: >
+      bash -c "pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.1.0/en_core_web_md-3.1.0-py3-none-any.whl
+      && pip install https://github.com/goldenrecursion/golden-models/releases/download/en_funding_round_model-0.0.1/en_funding_round_model-0.0.1-py3-none-any.whl
+      && pip install https://github.com/goldenrecursion/golden-models/releases/download/en_ceo_model-0.0.1/en_ceo_model-0.0.1-py3-none-any.whl
+      && uvicorn api:app --host 0.0.0.0 --port 5000"
     ports:
       - 5000:5000
     volumes:
