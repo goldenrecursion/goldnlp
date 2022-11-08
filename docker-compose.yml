@@ -1,0 +1,33 @@
+services:
+  jupyter:
+    build: .
+    image: goldnlp
+    working_dir: /opt/goldnlp
+    command: jupyter lab --ip=0.0.0.0 --no-browser --port=8888 --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.allow_origin='*' --allow-root
+    ports:
+      - 8888:8888
+    volumes:
+      - ./:/opt/goldnlp/
+      - ./goldnlp-logs:/var/log
+  docs:
+    image: goldnlp 
+    working_dir: /opt/goldnlp
+    command: mkdocs serve -a 0.0.0.0:8000
+    ports:
+      - 8000:8000
+    volumes:
+      - ./:/opt/goldnlp/
+  tests:
+    image: goldnlp
+    volumes:
+      - ./:/opt/goldnlp/
+    command: pytest /opt/goldnlp/tests/
+  named-entity-recognition:
+    image: goldnlp
+    working_dir: /opt/goldnlp/services/named-entity-recognition
+    command: uvicorn api:app --host 0.0.0.0 --port 5000
+    ports:
+      - 5000:5000
+    volumes:
+      - ./:/opt/goldnlp/
+      - ./named-entity-recognition-logs:/var/log

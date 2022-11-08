@@ -1,0 +1,94 @@
+[tool.poetry]
+name = "goldnlp"
+version = "0.0.1"
+description = "Golden's NLP/NLU library focused on state-of-the-art NLP Tasks."
+authors = ["aychang95"]
+
+[tool.poetry.dependencies]
+python = "^3.7.10, <3.11"
+wheel = "^0.36.2"
+jupyterlab = "^3.0.0"
+ipywidgets = "^7.6.3"
+spacy = "~3.1.0"
+en-core-web-md = {url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.1.0/en_core_web_md-3.1.0-py3-none-any.whl#egg=en_core_web_md"}
+en-core-web-sm = {url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.1.0/en_core_web_sm-3.1.0-py3-none-any.whl#egg=en_core_web_sm"}
+en-funding-round-model = {url = "https://github.com/goldenrecursion/golden-models/releases/download/en_funding_round_model-0.0.1/en_funding_round_model-0.0.1-py3-none-any.whl#egg=en_funding_round_model"}
+en-ceo-model = {url = "https://github.com/goldenrecursion/golden-models/releases/download/en_ceo_model-0.0.1/en_ceo_model-0.0.1-py3-none-any.whl#egg=en_ceo_model"}
+blis= "<=0.7.5"  # pinned to avoid https://github.com/explosion/spaCy/issues/10334
+nltk = "^3.6.2"
+scikit-learn = "0.24.2"
+pandas = "1.3.0"
+elasticsearch-dsl = "7.3.0"
+pillow = "^8.3.1"
+scipy = "^1.7.0"
+simhash = "1.9.0"
+langdetect = "1.0.7"
+Pyphen = "0.9.5"
+dateparser = "1.0.0"
+probablepeople = "0.5.4"
+fold-to-ascii = "1.0.2.post1"
+matplotlib = "3.4.2"
+certifi = "2017.4.17"
+fastnn = "^0.3.0"
+uvicorn = {version="^0.14.0"}
+fastapi = {version="^0.67.0"}
+numba = "^0.55.2"
+numpy = "1.21.6"
+openai = "^0.15.0"
+pyvis = "^0.1.9"
+tqdm = "^4.63.0"
+mmh3 = "^3.0.0"
+boto3 = "^1.21.23"
+python-dotenv = "^0.19.2"
+usaddress-scourgify = {git = "https://github.com/GreenBuildingRegistry/usaddress-scourgify", rev = "e2990ae01c9b8cdb28a3077070c17ca4726c9cbe"}
+textdistance = "^4.3.0"
+Jinja2 = "<3.0"
+MarkupSafe = "<=2.0.1"
+psycopg = {extras = ["pool"], version = "^3.0.15"}
+torch = {version = "1.*", optional = true}
+torchvision = {version = "0.*", optional = true}
+# The below options don't work with poetry. We can stick to PyTorch's stable cuda versions,
+# but this is a problem for development with later cuda versions
+#torch = {version = "1.10.0+cu113", optional = true}
+#torchvision = {version = "0.11.1+cu113", optional = true}
+#torch = {url = "https://download.pytorch.org/whl/cu113/torch-1.10.0%2Bcu113-cp38-cp38-linux_x86_64.whl"}
+#torchvision = {url = "https://download.pytorch.org/whl/cu113/torchvision-0.11.1%2Bcu113-cp38-cp38-linux_x86_64.whl"}
+extruct = {version="^0.13.0", optional = true}
+top2vec = {version="^1.0.24", optional = true}
+gensim = {version="^3.8.3", optional = true}
+boilerpy3 = {version="^1.0.5", optional = true}
+pytidylib = {version="^0.3.2", optional = true}
+mkdocs-material = {version="^8.1.6", optional = true}
+mkdocstrings = {version="^0.17.0", optional = true}
+mkdocs-render-swagger-plugin = {version="^0.0.3", optional = true}
+networkx = {version="^2.6.3", optional = true}
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+flake8 = "^3.8.4"
+black = "^22.1.0"
+isort = "^5.10.1"
+
+[tool.poetry.extras]
+docs = ["mkdocs-material", "mkdocstrings", "mkdocs-render-swagger-plugin"]
+torch = ["torch", "torchvision"]
+topicmodel = ["top2vec", "gensim"]
+webextract = ["extruct", "boilerpy3", "pytidylib"]
+linkprediction = ["networkx"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length=100
+target-version=["py38"]
+
+[tool.isort]
+multi_line_output=3
+include_trailing_comma=true
+force_grid_wrap=0
+use_parentheses=true
+line_length=100
+py_version="38"
+known_first_party=["goldnlp"]
