@@ -10,10 +10,6 @@ wheel = "^0.36.2"
 jupyterlab = "^3.0.0"
 ipywidgets = "^7.6.3"
 spacy = "~3.1.0"
-en-core-web-md = {url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.1.0/en_core_web_md-3.1.0-py3-none-any.whl#egg=en_core_web_md"}
-en-core-web-sm = {url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.1.0/en_core_web_sm-3.1.0-py3-none-any.whl#egg=en_core_web_sm"}
-en-funding-round-model = {url = "https://github.com/goldenrecursion/golden-models/releases/download/en_funding_round_model-0.0.1/en_funding_round_model-0.0.1-py3-none-any.whl#egg=en_funding_round_model"}
-en-ceo-model = {url = "https://github.com/goldenrecursion/golden-models/releases/download/en_ceo_model-0.0.1/en_ceo_model-0.0.1-py3-none-any.whl#egg=en_ceo_model"}
 blis= "<=0.7.5"  # pinned to avoid https://github.com/explosion/spaCy/issues/10334
 nltk = "^3.6.2"
 scikit-learn = "0.24.2"
@@ -47,12 +43,6 @@ MarkupSafe = "<=2.0.1"
 psycopg = {extras = ["pool"], version = "^3.0.15"}
 torch = {version = "1.*", optional = true}
 torchvision = {version = "0.*", optional = true}
-# The below options don't work with poetry. We can stick to PyTorch's stable cuda versions,
-# but this is a problem for development with later cuda versions
-#torch = {version = "1.10.0+cu113", optional = true}
-#torchvision = {version = "0.11.1+cu113", optional = true}
-#torch = {url = "https://download.pytorch.org/whl/cu113/torch-1.10.0%2Bcu113-cp38-cp38-linux_x86_64.whl"}
-#torchvision = {url = "https://download.pytorch.org/whl/cu113/torchvision-0.11.1%2Bcu113-cp38-cp38-linux_x86_64.whl"}
 extruct = {version="^0.13.0", optional = true}
 top2vec = {version="^1.0.24", optional = true}
 gensim = {version="^3.8.3", optional = true}
@@ -62,6 +52,16 @@ mkdocs-material = {version="^8.1.6", optional = true}
 mkdocstrings = {version="^0.17.0", optional = true}
 mkdocs-render-swagger-plugin = {version="^0.0.3", optional = true}
 networkx = {version="^2.6.3", optional = true}
+# The below options don't work with poetry. We can stick to PyTorch's stable cuda versions,
+# but this is a problem for development with later cuda versions
+#torch = {version = "1.10.0+cu113", optional = true}
+#torchvision = {version = "0.11.1+cu113", optional = true}
+#torch = {url = "https://download.pytorch.org/whl/cu113/torch-1.10.0%2Bcu113-cp38-cp38-linux_x86_64.whl"}
+#torchvision = {url = "https://download.pytorch.org/whl/cu113/torchvision-0.11.1%2Bcu113-cp38-cp38-linux_x86_64.whl"}
+#en-core-web-md = {url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.1.0/en_core_web_md-3.1.0-py3-none-any.whl#egg=en_core_web_md"}
+#en-core-web-sm = {url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.1.0/en_core_web_sm-3.1.0-py3-none-any.whl#egg=en_core_web_sm"}
+#en-funding-round-model = {url = "https://github.com/goldenrecursion/golden-models/releases/download/en_funding_round_model-0.0.1/en_funding_round_model-0.0.1-py3-none-any.whl#egg=en_funding_round_model"}
+#en-ceo-model = {url = "https://github.com/goldenrecursion/golden-models/releases/download/en_ceo_model-0.0.1/en_ceo_model-0.0.1-py3-none-any.whl#egg=en_ceo_model"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
