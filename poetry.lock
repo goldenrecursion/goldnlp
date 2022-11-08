@@ -597,14 +597,6 @@ optional = false
 python-versions = "*"
 
 [[package]]
-name = "frozendict"
-version = "2.3.4"
-description = "A simple immutable dictionary"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[[package]]
 name = "frozenlist"
 version = "1.3.3"
 description = "A list-like structure which implements collections.abc.MutableSequence"
@@ -640,21 +632,6 @@ distributed = ["Pyro4 (>=4.27)"]
 docs = ["pytest", "pytest-rerunfailures", "mock", "cython", "nmslib", "pyemd", "testfixtures", "Morfessor (==2.0.2a4)", "python-Levenshtein (>=0.10.2)", "visdom (>0.1.8.7)", "scikit-learn", "Pyro4 (>=4.27)", "sphinx (<=2.4.4)", "sphinx-gallery", "sphinxcontrib.programoutput", "sphinxcontrib-napoleon", "matplotlib", "plotly", "memory-profiler", "annoy", "pyro4", "nltk", "statsmodels", "pandas"]
 test = ["pytest", "pytest-rerunfailures", "mock", "cython", "nmslib", "pyemd", "testfixtures", "Morfessor (==2.0.2a4)", "python-Levenshtein (>=0.10.2)", "visdom (>0.1.8.7)", "scikit-learn"]
 test-win = ["pytest", "pytest-rerunfailures", "mock", "cython", "nmslib", "pyemd", "testfixtures", "Morfessor (==2.0.2a4)", "python-Levenshtein (>=0.10.2)", "visdom (>0.1.8.7)", "scikit-learn"]
-
-[[package]]
-name = "geocoder"
-version = "1.38.1"
-description = "Geocoder is a simple and consistent geocoding library."
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-click = "*"
-future = "*"
-ratelim = "*"
-requests = "*"
-six = "*"
 
 [[package]]
 name = "gevent"
@@ -2271,17 +2248,6 @@ cffi = {version = "*", markers = "implementation_name == \"pypy\""}
 py = {version = "*", markers = "implementation_name == \"pypy\""}
 
 [[package]]
-name = "ratelim"
-version = "0.1.6"
-description = "Makes it easy to respect rate limits."
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-decorator = "*"
-
-[[package]]
 name = "rdflib"
 version = "6.2.0"
 description = "RDFLib is a Python library for working with RDF, a simple yet powerful language for representing information."
@@ -2944,40 +2910,6 @@ secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "cer
 socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
-name = "usaddress"
-version = "0.5.10"
-description = "Parse US addresses using conditional random fields"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-future = ">=0.14"
-probableparsing = "*"
-python-crfsuite = ">=0.7"
-
-[[package]]
-name = "usaddress-scourgify"
-version = "0.2.4"
-description = ""
-category = "main"
-optional = false
-python-versions = "*"
-develop = false
-
-[package.dependencies]
-frozendict = ">=1.2"
-geocoder = ">=1.22.6"
-usaddress = ">=0.5.9"
-yaml-config = ">=0.1.2"
-
-[package.source]
-type = "git"
-url = "https://github.com/GreenBuildingRegistry/usaddress-scourgify"
-reference = "e2990ae01c9b8cdb28a3077070c17ca4726c9cbe"
-resolved_reference = "e2990ae01c9b8cdb28a3077070c17ca4726c9cbe"
-
-[[package]]
 name = "uvicorn"
 version = "0.14.0"
 description = "The lightning-fast ASGI server."
@@ -3083,17 +3015,6 @@ numpy = ">=1.6.1"
 pillow = "*"
 
 [[package]]
-name = "yaml-config"
-version = "0.1.5"
-description = "Python client for reading yaml based config files"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-PyYAML = ">=3.13"
-
-[[package]]
 name = "yarl"
 version = "1.8.1"
 description = "Yet another URL library"
@@ -3153,7 +3074,7 @@ webextract = ["extruct", "boilerpy3", "pytidylib"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7.10, <3.11"
-content-hash = "ed3bd95b1763ca58107b9b5f64fadbadac8efc0d545382f42815b1044aae3034"
+content-hash = "db2b96e57d315b629f146dbc2c596a87efc2c58e5a15cdfcbe80fdd721a8c339"
 
 [metadata.files]
 aiohttp = []
@@ -3525,7 +3446,6 @@ fold-to-ascii = [
     {file = "fold_to_ascii-1.0.2.post1-py3-none-any.whl", hash = "sha256:6a06640b0cd8cdd16b83ba72a098fb4b243987a50b2f8213b419b6de97787de6"},
     {file = "fold_to_ascii-1.0.2.post1.tar.gz", hash = "sha256:7167a07fdc230bd5df5381e9221fe246d0eff3a86eb67e3935f91f5aeca3533a"},
 ]
-frozendict = []
 frozenlist = []
 future = [
     {file = "future-0.18.2.tar.gz", hash = "sha256:b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"},
@@ -3559,10 +3479,6 @@ gensim = [
     {file = "gensim-3.8.3-cp38-cp38-win32.whl", hash = "sha256:90115d12ee545c21cc75521ef1bb3dd66aae8a378e9c2eb029c9f22df173c125"},
     {file = "gensim-3.8.3-cp38-cp38-win_amd64.whl", hash = "sha256:4e34cf2e50f3eab3e303da46089ea4972567bf216e28f7535ada155770784ac8"},
     {file = "gensim-3.8.3.tar.gz", hash = "sha256:786adb0571f75114e9c5f7a31dd2e6eb39a9791f22c8757621545e2ded3ea367"},
-]
-geocoder = [
-    {file = "geocoder-1.38.1-py2.py3-none-any.whl", hash = "sha256:a733e1dfbce3f4e1a526cac03aadcedb8ed1239cf55bd7f3a23c60075121a834"},
-    {file = "geocoder-1.38.1.tar.gz", hash = "sha256:c9925374c961577d0aee403b09e6f8ea1971d913f011f00ca70c76beaf7a77e7"},
 ]
 gevent = []
 geventhttpclient = []
@@ -4139,10 +4055,6 @@ pyyaml-env-tag = [
     {file = "pyyaml_env_tag-0.1.tar.gz", hash = "sha256:70092675bda14fdec33b31ba77e7543de9ddc88f2e5b99160396572d11525bdb"},
 ]
 pyzmq = []
-ratelim = [
-    {file = "ratelim-0.1.6-py2.py3-none-any.whl", hash = "sha256:e1a7dd39e6b552b7cc7f52169cd66cdb826a1a30198e355d7016012987c9ad08"},
-    {file = "ratelim-0.1.6.tar.gz", hash = "sha256:826d32177e11f9a12831901c9fda6679fd5bbea3605910820167088f5acbb11d"},
-]
 rdflib = []
 rdflib-jsonld = [
     {file = "rdflib-jsonld-0.6.2.tar.gz", hash = "sha256:107cd3019d41354c31687e64af5e3fd3c3e3fa5052ce635f5ce595fd31853a63"},
@@ -4321,11 +4233,6 @@ tzdata = []
 tzlocal = []
 umap-learn = []
 urllib3 = []
-usaddress = [
-    {file = "usaddress-0.5.10-py2.py3-none-any.whl", hash = "sha256:4d66b11fdbec84f18d1bac8614fea2d1be1bb027e55849b5e2c1057bbca17437"},
-    {file = "usaddress-0.5.10.tar.gz", hash = "sha256:1a8ebf62d0cce58d7d8286dde70373c530a9317b6fe1752a4197b75b7d0870e3"},
-]
-usaddress-scourgify = []
 uvicorn = [
     {file = "uvicorn-0.14.0-py3-none-any.whl", hash = "sha256:2a76bb359171a504b3d1c853409af3adbfa5cef374a4a59e5881945a97a93eae"},
     {file = "uvicorn-0.14.0.tar.gz", hash = "sha256:45ad7dfaaa7d55cab4cd1e85e03f27e9d60bc067ddc59db52a2b0aeca8870292"},
@@ -4376,10 +4283,6 @@ widgetsnbextension = [
     {file = "widgetsnbextension-3.6.1.tar.gz", hash = "sha256:9c84ae64c2893c7cbe2eaafc7505221a795c27d68938454034ac487319a75b10"},
 ]
 wordcloud = []
-yaml-config = [
-    {file = "yaml-config-0.1.5.tar.gz", hash = "sha256:5924c92d8e7c49fa9ab2ef8bb3122794b261f217b14e69698a481d4e3ba535b5"},
-    {file = "yaml_config-0.1.5-py2.py3-none-any.whl", hash = "sha256:8d30a65eab4eb303af252350375c75fbae179854d47e26327c7ae0a9177f29be"},
-]
 yarl = []
 zipp = []
 "zope.event" = [

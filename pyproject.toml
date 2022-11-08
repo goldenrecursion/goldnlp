@@ -36,7 +36,6 @@ tqdm = "^4.63.0"
 mmh3 = "^3.0.0"
 boto3 = "^1.21.23"
 python-dotenv = "^0.19.2"
-usaddress-scourgify = {git = "https://github.com/GreenBuildingRegistry/usaddress-scourgify", rev = "e2990ae01c9b8cdb28a3077070c17ca4726c9cbe"}
 textdistance = "^4.3.0"
 Jinja2 = "<3.0"
 MarkupSafe = "<=2.0.1"
