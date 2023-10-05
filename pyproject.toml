@@ -37,7 +37,7 @@ boilerpy3 = {version="^1.0.5", optional = true}
 pytidylib = {version="^0.3.2", optional = true}
 mkdocs-material = {version="^8.1.6", optional = true}
 mkdocstrings = {version="^0.17.0", optional = true}
-mkdocs-render-swagger-plugin = {version="^0.0.3", optional = true}
+mkdocs-render-swagger-plugin = {version="^0.1.0", optional = true}
 networkx = {version="^2.6.3", optional = true}
 # The below options don't work with poetry. We can stick to PyTorch's stable cuda versions,
 # but this is a problem for development with later cuda versions
