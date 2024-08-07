@@ -53,7 +53,7 @@ networkx = {version="^2.6.3", optional = true}
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 flake8 = "^3.8.4"
-black = "^22.1.0"
+black = "^24.0.0"
 isort = "^5.10.1"
 
 [tool.poetry.extras]
