@@ -51,7 +51,7 @@ networkx = {version="^2.6.3", optional = true}
 #en-ceo-model = {url = "https://github.com/goldenrecursion/golden-models/releases/download/en_ceo_model-0.0.1/en_ceo_model-0.0.1-py3-none-any.whl#egg=en_ceo_model"}
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
+pytest = "^9.0.0"
 flake8 = "^3.8.4"
 black = "^22.1.0"
 isort = "^5.10.1"
