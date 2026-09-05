@@ -35,7 +35,7 @@ top2vec = {version="^1.0.24", optional = true}
 gensim = {version="^3.8.3", optional = true}
 boilerpy3 = {version="^1.0.5", optional = true}
 pytidylib = {version="^0.3.2", optional = true}
-mkdocs-material = {version="^8.1.6", optional = true}
+mkdocs-material = {version="^9.0.0", optional = true}
 mkdocstrings = {version="^0.17.0", optional = true}
 mkdocs-render-swagger-plugin = {version="^0.0.3", optional = true}
 networkx = {version="^2.6.3", optional = true}
