@@ -18,7 +18,7 @@ scipy = "^1.7.0"
 simhash = "1.9.0"
 langdetect = "1.0.7"
 Pyphen = "0.9.5"
-dateparser = "1.0.0"
+dateparser = "1.4.3"
 fold-to-ascii = "1.0.2.post1"
 fastnn = "^0.3.0"
 uvicorn = {version="^0.14.0"}
