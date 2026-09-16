@@ -30,7 +30,7 @@ tqdm = "^4.63.0"
 boto3 = "^1.21.23"
 torch = {version = "1.*", optional = true}
 torchvision = {version = "0.*", optional = true}
-extruct = {version="^0.13.0", optional = true}
+extruct = {version="^0.18.0", optional = true}
 top2vec = {version="^1.0.24", optional = true}
 gensim = {version="^3.8.3", optional = true}
 boilerpy3 = {version="^1.0.5", optional = true}
